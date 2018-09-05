@@ -37,7 +37,7 @@ app.post('/peliculas', function (req, res) {
         db.movies.save(toSave);
         return res.send({ msg: 'La pelicula ha sido guardada' })
     } else {
-        return res.serverError({msg: 'Hubo un error al guardar la pelicular', fields: 'title, description, score, poster, cast, gender'})
+        return res.status(400).send({msg: 'Hubo un error al guardar la pelicular', fields: 'title, description, score, poster, cast, gender'})
     }
 })
 
