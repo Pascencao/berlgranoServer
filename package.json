@@ -4,7 +4,8 @@
   "description": "servicio para guardar lo hecho en clase",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon server.js",
+    "prestart": "npm install",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pablo Ascencao",
